@@ -13,8 +13,33 @@ namespace cnum{
         T* end; 
         T* begin; 
         int capacity; 
-        int size;
+        int sizes;
+
         public: 
+            vector(){
+                sizes = 0;
+                capacity = 1;
+                arr = new T[1];
+            }
+
+            void push_back(T data)
+            {
+                if(sizes == capacity){
+
+                }
+                arr[sizes] = data;
+                sizes += 1;
+            }
+
+            int get(int index){
+                return arr[index];
+            }
+
+            //ask for size
+            int size(){
+                return sizes;
+            }
+
         private:
          
 

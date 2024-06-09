@@ -1,5 +1,6 @@
 #include "src/matrix.hpp"
 #include "src/pair.hpp"
+#include "src/vector.hpp"
 
 #include <iostream>
 
@@ -13,6 +14,11 @@ int main(){
     p = m.shape();
     std::cout<<p.first()<<std::endl;
     std::cout<<p.second(3)<<std::endl;
+
+    cnum::vector<int> v;
+    v.push_back(3);
+    std::cout<<v.get(0);
+
 
     return 0;
 }

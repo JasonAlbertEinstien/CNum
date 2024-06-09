@@ -1,5 +1,5 @@
-#include "matrix.hpp"
-#include "pair.hpp"
+#include "src/matrix.hpp"
+#include "src/pair.hpp"
 
 #include <iostream>
 

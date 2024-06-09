@@ -1,23 +1,25 @@
-#include <iostream> 
-#include <functional>
-#ifndef MATRIX
-#define MATRIX
+#ifndef CNUM_MATRIX_HPP
+#define CNUM_MATRIX_HPP
 
-class Matrix{
-    public:
-        //init Matrix
-        Matrix (int rows , int column){
-            rows = rows; columns = column;
-        }
-        
-        //Return columns and row as a pair of number
-        std::pair<int , int> shape(){
-            return std::make_pair(columns , rows);
-        }
+#include "pair.hpp"
+#include "vector.hpp"
 
-    private:
-        int rows; int columns;
+namespace cnum{
+    class Matrix{
+        public:
+            //init Matrix
+            Matrix (int rows , int column){
+                rows = rows; columns = column;
+            }
+            
+            //Return columns and row as a pair of number
+            Pair<int , int> shape(){
+                return Pair<int , int>(columns , rows);
+            }
 
-};
+        private:
+            int rows; int columns;
 
+    };
+}
 #endif

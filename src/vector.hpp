@@ -25,10 +25,17 @@ namespace cnum{
             void push_back(T data)
             {
                 if(sizes == capacity){
-
+                    T* new_arr = new T[2*capacity];
+                    capacity = 2*capacity;
+                    for(int i = 0 ; i<sizes; i++)
+                        new_arr[i] = arr[i];
+                    delete arr;
+                    arr = new T[capacity];
+                    for(int i = 0; i < sizes; i++)
+                        arr[i] = new_arr[i];
                 }
                 arr[sizes] = data;
-                sizes += 1;
+                sizes ++;
             }
 
             int get(int index){
